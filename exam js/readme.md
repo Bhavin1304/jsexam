@@ -55,6 +55,14 @@ A simple web-based Recipe Manager that allows users to add, edit, delete, search
 
 
 
+
+https://github.com/user-attachments/assets/6b438567-d1bb-47f4-9cf7-3ab479e9ca9f
+
+
+
+
+
+
 * **Data Model & DOM References:**
   Variables are declared for recipes and form elements.
 
