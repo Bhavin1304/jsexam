@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recipe Book</title>
+  <style>
+    /* minimal styling */
+    body { font-family: sans-serif; margin:20px; }
+    .container { display:flex; gap:20px; }
+    form,input,textarea,select,button { display:block; margin-bottom:10px; width:100%; }
+    .recipe { border:1px solid #ccc; padding:10px; border-radius:5px; margin-bottom:10px; }
+    .controls { display:flex; gap:5px; margin-top:10px;}
+  </style>
+</head>
+<body>
+  <h1>Recipe Book</h1>
+  <div class="container">
+    <div class="left">
+      <h2>Add/Edit Recipe</h2>
+      <form id="recipe-form">
+        <input type="hidden" id="recipe-id" />
+        <label>Title*</label><input type="text" id="recipe-title" required />
+        <label>Ingredients* (comma‑separated)</label><textarea id="recipe-ingredients" required></textarea>
+        <label>Instructions</label><textarea id="recipe-instructions"></textarea>
+        <label>Cuisine Type</label>
+        <select id="recipe-cuisine">
+          <option value="">-- select --</option>
+          <option value="Italian">Italian</option>
+          <option value="Chinese">Chinese</option>
+          <option value="Indian">Indian</option>
+          <option value="Mexican">Mexican</option>
+        </select>
+        <button type="submit">Save Recipe</button>
+        <button type="button" id="form-clear">Clear</button>
+      </form>
+    </div>
+    <div class="right">
+      <h2>Search & Filter</h2>
+      <input type="text" id="search-query" placeholder="Search title or ingredients" />
+      <select id="filter-cuisine">
+        <option value="">All Cuisines</option>
+        <option>Italian</option><option>Chinese</option><option>Indian</option><option>Mexican</option>
+      </select>
+      <h2>Recipes</h2>
+      <div id="recipe-list"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
